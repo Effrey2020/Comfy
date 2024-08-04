@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>コンフィー フットウェア</title>
+    <link rel="stylesheet" href="./util/style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <!-- ============= BOX ICONS CDN ============= -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- ============= SWIPERJS CDN ============= -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <style>
+      .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        max-width: 500px;
+        width: 90%;
+        text-align: center;
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 35px;
+        font-weight: bold;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        cursor: pointer;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="modal">
+      <span class="close">&times;</span>
+      <h3>最新のコレクションをご覧ください</h3>
+      <p>
+        新しいスタイルと快適さを提供する最新のフットウェアコレクションをチェックしてください。
+      </p>
+    </div>
+
+    <nav>
+      <div class="container">
+        <a href="index.html" class="logo">コンフィー</a>
+
+        <ul>
+          <li><a href="#" class="active">ホーム</a></li>
+          <li><a href="#catalog">カタログ</a></li>
+          <li><a href="#why-choose-us">なぜ私たちを選ぶのか？</a></li>
+          <li><a href="#faqs">よくある質問</a></li>
+        </ul>
+
+        <div class="icons">
+          <a><i class="bx bx-search"></i></a>
+          <a><i class="bx bx-basket"></i></a>
+          <a><i class="bx bx-user"></i></a>
+        </div>
+
+        <button id="menu-btn"><i class="bx bx-menu"></i></button>
+        <button id="close-btn"><i class="bx bx-x"></i></button>
+      </div>
+    </nav>
+    <!-- ============= END OF NAVBAR ============= -->
+
+    <header>
+      <div class="container">
+        <div class="info">
+          <div class="delivery">
+            <small>世界中送料無料</small>
+            <i class="bx bxs-truck"></i>
+          </div>
+          <h1>あらゆる機会に合う快適なフットウェア</h1>
+          <p>
+            すべての快適なニーズに応える多用途でスタイリッシュなフットウェアオプション！
+          </p>
+
+          <div class="cta">
+            <a href="#catalog" class="btn btn-primary">製品を見る</a>
+          </div>
+        </div>
+        <div class="header-image">
+          <img src="./assets/headerimg.png" alt="" />
+        </div>
+      </div>
+    </header>
+    <!-- ============= END OF HEADER ============= -->
+
+    <section id="catalog">
+      <div class="container">
+        <h2>カタログ</h2>
+        <p>
+          便利で満足のいくショッピング体験のために、幅広い高品質な製品を発見してください！
+        </p>
+        <article>
+          <div class="image">
+            <img src="./assets/model1.png" alt="" />
+          </div>
+          <div class="info">
+            <h3>シック ノワール</h3>
+            <h4>¥4,999</h4>
+            <p>
+              あらゆる機会に適した洗練されたエレガントなスタイルの黒い革のブーツを体験してください。
+            </p>
+            <a href="#"> 詳細を見る</a>
+          </div>
+        </article>
+        <article>
+          <div class="info">
+            <h3>スリーク エレガンス</h3>
+            <h4>¥6,499</h4>
+            <p>
+              スリークな黒いブーツでスタイルを高めましょう。洗練されたエレガンスのために作られた、どんな機会にも最適な選択です。
+            </p>
+            <a href="#"> 詳細を見る</a>
+          </div>
+          <div class="image">
+            <img src="./assets/model2.png" alt="" />
+          </div>
+        </article>
+        <article>
+          <div class="image">
+            <img src="./assets/model3.png" alt="" />
+          </div>
+          <div class="info">
+            <h3>ミッドナイト クラシー</h3>
+            <h4>¥9,499</h4>
+            <p>
+              あらゆる機会に適した多用途な黒いブーツでタイムレスなエレガンスをお楽しみください。クラシックな洗練さでスタイルを高めます。
+            </p>
+            <a href="#"> 詳細を見る</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- ============= END OF PRODUCTS ============= -->
+
+    <section id="why-choose-us">
+      <div class="container">
+        <h2>なぜ私たちを選ぶのか</h2>
+        <p>
+          私たちのフットウェア会社では、品質、スタイル、快適さを誇りに思っています。卓越したフィット感を提供し、ファッションニーズに応えます。違いを今すぐ発見してください！
+        </p>
+
+        <article>
+          <div class="reasons">
+            <div class="reason-icon"><i class="bx bx-check-double"></i></div>
+            <h5>有害な化学物質不使用</h5>
+          </div>
+
+          <div class="reasons">
+            <div class="reason-icon"><i class="bx bx-check-shield"></i></div>
+            <h5>フェイクレザー</h5>
+          </div>
+
+          <div class="reasons">
+            <div class="reason-icon"><i class="bx bxs-t-shirt"></i></div>
+            <h5>長持ちする耐久性</h5>
+          </div>
+          <div class="reasons">
+            <div class="reason-icon"><i class="bx bx-closet"></i></div>
+            <h5>サイズに忠実なフィット</h5>
+          </div>
+          <div class="reasons">
+            <div class="reason-icon"><i class="bx bx-badge-check"></i></div>
+            <h5>多目的用途</h5>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- ============= END OF WHY CHOOSE US ============= -->
+
+    <div class="swiper mySwiper">
+      <div class="container">
+        <h2>最新のキャンペーン</h2>
+        <p>
+          最新のキャンペーンを発表します:
+          スタイルを高める。ファッションと快適さの旅に参加して、最新のコレクションを紹介し、フットウェア体験を再定義します。
+        </p>
+      </div>
+
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./assets/slide1.png" alt="" /></div>
+        <div class="swiper-slide"><img src="./assets/slide2.png" alt="" /></div>
+        <div class="swiper-slide"><img src="./assets/slide3.png" alt="" /></div>
+        <div class="swiper-slide"><img src="./assets/slide1.png" alt="" /></div>
+        <div class="swiper-slide"><img src="./assets/slide2.png" alt="" /></div>
+        <div class="swiper-slide"><img src="./assets/slide3.png" alt="" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- ============= END OF SWIPER ============= -->
+
+    <section id="faqs">
+      <div class="container">
+        <h2>よくある質問</h2>
+
+        <div class="content">
+          <article class="open">
+            <div class="icon"><i class="bx bx-minus"></i></div>
+            <div class="detail">
+              <h4>製品をお届けするまでの時間はどれくらいですか？</h4>
+              <p>
+                配送時間はお住まいの地域や製品によって異なります。通常、ご注文は5〜7営業日以内にお届けします。より正確な配送予定については、配送ポリシーをご確認ください。
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="icon"><i class="bx bx-plus"></i></div>
+            <div class="detail">
+              <h4>サイズチャートはどこで見られますか？</h4>
+              <p>
+                サイトの「サイズガイド」セクションでサイズチャートをご覧いただけます。詳細な測定値とガイドラインを提供しており、快適さとスタイルに最適なフィット感を選ぶのに役立ちます。
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="icon"><i class="bx bx-plus"></i></div>
+            <div class="detail">
+              <h4>アメリカ合衆国への配送は行っていますか？</h4>
+              <p>
+                はい、アメリカ合衆国への配送を行っています。全米に配送を提供しており、米国のお客様が私たちの製品と優れたサービスを楽しめるようにしています。詳細については、配送情報ページをご覧ください。
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="icon"><i class="bx bx-plus"></i></div>
+            <div class="detail">
+              <h4>商品を交換できますか？</h4>
+              <p>
+                もちろん、簡単に交換できます。ご購入品が期待に合わない場合や必要に応じて、受け取り後30日以内に交換できます。プロセスの詳細については、返品と交換のページをご覧ください。
+              </p>
+            </div>
+          </article>
+        </div>
+        <a href="faqs.html" class="btn"> 詳細を見る</a>
+      </div>
+    </section>
+    <!-- ============= END OF FAQS ============= -->
+
+    <footer>
+      <div class="container">
+        <div class="f1">
+          <div class="logo">
+            <h4>コンフィー</h4>
+          </div>
+          <p>快適さを足元に：女性のブーツ、あなたの足が喜ぶ。</p>
+          <div class="subscribe">
+            <input type="email" placeholder="メールアドレスを入力" />
+            <button><i class="bx bx-chevron-right"></i></button>
+          </div>
+        </div>
+
+        <div class="f2">
+          <h4>リンク</h4>
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="#catalog">カタログ</a></li>
+            <li><a href="#why-choose-us">なぜ私たちを選ぶのか？</a></li>
+            <li><a href="faqs.html">よくある質問</a></li>
+          </ul>
+        </div>
+
+        <div class="f3">
+          <h4>プライバシー</h4>
+          <ul>
+            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="#">返金ポリシー</a></li>
+            <li><a href="#">利用規約</a></li>
+          </ul>
+        </div>
+
+        <div class="f4">
+          <h4>お問い合わせ</h4>
+          <p>
+            +(44)3333-333333 <br />
+            info@comfy.com
+          </p>
+
+          <ul class="socials">
+            <li>
+              <a href="https://instagram.com" target="_blank"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://facebook.com" target="_blank"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com" target="_blank"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <small>Copyright &copy; コンフィー. All Rights Reserved.</small>
+      </div>
+    </footer>
+    <!-- ============= END OF FOOTER ============= -->
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./util/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const overlay = document.getElementById("overlay");
+        const modal = document.getElementById("modal");
+
+        const closeModal = () => {
+          overlay.style.display = "none";
+          modal.style.display = "none";
+        };
+
+        overlay.addEventListener("click", closeModal);
+        modal.addEventListener("click", closeModal);
+      });
+    </script>
+  </body>
+</html>
